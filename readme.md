@@ -1,0 +1,1 @@
+day 4 task completed it contains set on programs using function
