@@ -40,15 +40,24 @@ var odd=(arr)=>{
 console.log(odd([1,2,3,4,5,6,7,8,9,10]))
 
 
-//Sum of all numbers in an array
-var a = (b,c,d) => {return b+c+d}
-console.log(a(1,2,3));
+// //Sum of all numbers in an array
+function test(...rest)
+{
+    let sum = 0;
+    for(i=0;i<rest.length;i++){
+    sum=sum+rest[i];
+}
+return sum;
+}
+console.log(test(2,3,4,1));
+
+
 
 //Return all the prime numbers in an array
 var result = [];
 var prime=(arr)=>{
   for(var i = 1;i<=arr.length;i++){
-        if(arr[i]%2!==0){
+        if(arr[i]%1==0 && arr[i]%arr[i]===0){
             result.push(arr[i])
         }
     }
