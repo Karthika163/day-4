@@ -16,10 +16,10 @@ console.log(odd([1,2,3,4,5,6,7,8,9,10]))
 //annonyms
 //print odd numbers in array
 var result = [];
-var a = function (arr){
-    for(var i=0;i<arr.length;i=i+1){
-        if(arr[i]%2!==0){
-            result.push(arr[i])
+var a = function (arr1){
+    for(var i=0;i<arr1.length;i=i+1){
+        if(arr1[i]%2!==0){
+            result.push(arr1[i])
         }
     }
     return result;
@@ -29,10 +29,10 @@ console.log(a([1,2,3,4,5,6,7,8,9,10]))
 // //arrow 
 // //print odd numbers in array
 var result = [];
-var odd=(arr)=>{
-    for(var i=0;i<arr.length;i=i+1){
-        if(arr[i]%2!==0){
-            result.push(arr[i])
+var odd=(arr2)=>{
+    for(var i=0;i<arr2.length;i=i+1){
+        if(arr2[i]%2!==0){
+            result.push(arr2[i])
         }
     }
     return result;
@@ -93,60 +93,55 @@ console.log(Palindrome(str2));
 console.log(Palindrome(str3));
 
 //Remove duplicates from an array
-var arr = ["car", "bus","car","train"]
+var arr4 = ["car", "bus","car","train"]
 function getDuplicates(data)
-{
+{ 
   return data.filter((value,index)=> data.indexOf(value)!==index);
 }
-console.log(getDuplicates(arr));
+console.log(getDuplicates(arr4));
 
 // covert all the string titles to caps
-function caps(arr){
-    var res = arr.toString();
-    var data = res.toLowerCase().split(" ");
+function caps(arr5){
+    var res1 = arr5.toString();
+    var data = res1.toLowerCase().split(" ");
     for (var i=0;i<data.length;i++)
     {
      return data[i] = data[i].charAt(0).toUpperCase()+ data[i].slice(1);
-    }return data.join(" ")
-}
-    console.log(caps(["tHis IS jAvAsCrIpT"]));
-
-    //uber
-    class  UberPrice{
-        constructor(kilometer,price=50)
-    {
-        this.kilometer = kilometer;
-        this.Price = price;
-    } get price(){
-        return this.kilometer*this.price;
     }
-    }var uber1 = new UberPrice(5);
-    var uber2 = new UberPrice(5,125);
-    console.log(uber1.Price);
-    console.log(uber2.Price);
-
+    return data[i].join(" ")
+}
+    console.log(caps(["tHis"]));
 
     //find median of two arrays
-    const arr1 = [1,2,3,4]
-const arr2 =  [2,4,6,8]
-function Median (arr1,arr2){
-    let arr = [...arr1,...arr2]
-    arr.sort((a,b)=> a-b)
-    let n = Math.floor(arr.length/2);
-    return arr.length%2===0 ? (arr[n/2+n/2-1]/2) : arr[Math.floor(n/2)]
+    const arr9 = [1,2,3,4]
+const arr7 =  [2,4,6,8]
+function Median (arr9,arr7){
+    let arr8 = [...arr9,...arr7]
+    arr8.sort((a,b)=> a-b)
+    let n = Math.floor(arr8.length/2);
+    return arr8.length%2===0 ? (arr8[n/2+n/2-1]/2) : arr8[Math.floor(n/2)]
 }
-console.log(median (arr1,arr2));
+console.log(Median (arr9,arr7));
 
 //rotate an array k times
-const arr = [1,3,4,6,7]
+const arr3 = [1,3,4,6,7]
 const k  = 3;
-(function (arr,k) {
+(function (arr3,k) {
     for(var i=0;i<k;i++){
-         arr.push(arr.shift())
-    }console.log(arr);
-})(arr,k);
+         arr3.push(arr3.shift())
+    }console.log(arr3);
+})(arr3,k);
 
 
+
+//Sum of all numbers in an array
+ function test(a,...rest){
+    let sum = 0;
+    for (var i=0;i<rest.length;i++)
+    {
+        sum = sum+rest[i];
+    }return sum;
+ } console.log(test(1,2,3,4,5));
 
 
 
